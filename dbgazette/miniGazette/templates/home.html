@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DBGazette</title>
+    <title>Dirt Bag Gazette</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <h1>Welcome to DBGazette</h1>
+    <h1>Welcome to Dirt Bag Gazette</h1>
     <a href="{% url 'toot' %}">Toot</a> | 
     <a href="{% url 'register' %}">Register</a>
     {% for toot in toots %}

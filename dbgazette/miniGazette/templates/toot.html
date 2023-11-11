@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Toot</title>
+    <!-- Include your CSS file here -->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Post a New Toot</h1>
+        <form method="post">
+            {% csrf_token %}
+            <textarea name="content" rows="4" cols="50" placeholder="What's happening?" required></textarea>
+            <br>
+            <input type="submit" value="Toot">
+        </form>
+    </div>
+</body>
+</html>
+
