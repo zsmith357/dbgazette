@@ -4,11 +4,12 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def home(request):
     toots = Toot.objects.all()
     return render(request, 'home.html', {'toots': toots})
 
+@login_required
 def toot(request):
     if request.method == 'POST':
         content = request.POST.get('content')
