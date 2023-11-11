@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DBGazette</title>
+</head>
+<body>
+    <h1>Welcome to DBGazette</h1>
+    <a href="{% url 'toot' %}">Toot</a> | 
+    <a href="{% url 'register' %}">Register</a>
+    {% for toot in toots %}
+        <p><strong>{{ toot.user.username }}</strong>: {{ toot.content }}</p>
+    {% endfor %}
+</body>
+</html>
+
